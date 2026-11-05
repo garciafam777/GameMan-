@@ -21,14 +21,14 @@ _SRC = os.path.join(_HERE, "src")
 if _SRC not in sys.path:
     sys.path.insert(0, _SRC)
 
-from CheatEngine2X.ui.main_window import main_window  # noqa: E402
+from CheatEngine2X.ui.main_window import MainWindow  # noqa: E402
 from CheatEngine2X.ui.theme import style_sheet  # noqa: E402
 
 
 def main() -> int:
     app = QtWidgets.QApplication(sys.argv)
     app.setStyle("Fusion")  # uniform dark QSS styling
-    win = main_window()
+    win = MainWindow()
     win.setStyleSheet(style_sheet())
     win.show()
     return app.exec()
